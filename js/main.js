@@ -23,16 +23,16 @@ $(document).ready(function(){
                     $('#repos').append(`
                         <div class="well">
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-7 text">
                                     <strong>${repo.name}</strong>: ${repo.description}
                                 </div>
                                 <div class="col-md-3">
-                                    <span class="label label-default">Forks: ${repo.forks_count}</span>
-                                    <span class="label label-primary">Watchers: ${repo.watchers_count}</span>
-                                    <span class="label label-success">Stars: ${repo.stargazers_count}</span>
+                                    <span class="label label-default text">Forks: ${repo.forks_count}</span>
+                                    <span class="label label-primary text">Watchers: ${repo.watchers_count}</span>
+                                    <span class="label label-success text">Stars: ${repo.stargazers_count}</span>
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="${repo.html_url}" target="_blank" class="btn btn-default">Repo Page</a>
+                                    <a href="${repo.html_url}" target="_blank" class="btn btn-default text">Repo Page</a>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,8 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
-          <h3 class="page-header">Latest Repo</h3>
+          <br></br>
+          <h3 class="page-header text">Latest Repo</h3>
           <div id="repos"></div>
             `);
         })
