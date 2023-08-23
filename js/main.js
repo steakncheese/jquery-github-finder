@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 $(document).ready(function(){
     $('#searchUser').on('keyup', function(e){
         let username = e.target.value;
@@ -6,15 +8,15 @@ $(document).ready(function(){
         $.ajax({
             url:'https://api.github.com/users/'+username,
             data: {
-                client_id:'e4ac208f4f9a9c3ebe6c',
-                client_secret:'75a5ad316dde92fad721643560bf8d1b90c2b37c',
+                client_id:client_id_api,
+                client_secret:client_secret_api,
             }
         }).done(function(user){
             $.ajax({
                 url:'https://api.github.com/users/'+username+'/repos',
                 data: {
-                    client_id:'e4ac208f4f9a9c3ebe6c',
-                    client_secret:'75a5ad316dde92fad721643560bf8d1b90c2b37c',
+                    client_id:client_id,
+                    client_secret:client_secret_api,
                     sort:'created: asc',
                     per_page: 5
                 }
