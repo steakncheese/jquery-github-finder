@@ -9,15 +9,15 @@ $(document).ready(function(){
         $.ajax({
             url:'https://api.github.com/users/'+username,
             data: {
-                client_id:client_id_api,
-                client_secret:client_secret_api,
+                client_id:CLIENT_ID_API,
+                client_secret:CLIENT_SECRET_API,
             }
         }).done(function(user){
             $.ajax({
                 url:'https://api.github.com/users/'+username+'/repos',
                 data: {
-                    client_id:client_id,
-                    client_secret:client_secret_api,
+                    client_id:CLIENT_ID_API,
+                    client_secret:CLIENT_SECRET_API,
                     sort:'created: asc',
                     per_page: 5
                 }
