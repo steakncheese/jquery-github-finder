@@ -30,5 +30,5 @@
 
 @font-face {
     font-family: 'Forum';
-    src: local('Forum'), url(.assets/fonts/Forum-Regular.ttf) format('opentype');
+    src: local('Forum'), url(../assets/fonts/Forum-Regular.ttf) format('opentype');
   }

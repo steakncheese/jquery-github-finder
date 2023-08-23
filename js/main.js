@@ -1,6 +1,3 @@
-import dotenv from 'dotenv'; 
-dotenv.config();
-
 $(document).ready(function(){
     $('#searchUser').on('keyup', function(e){
         let username = e.target.value;
